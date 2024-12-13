@@ -49,7 +49,7 @@ Adicionalmente, todos os usuários podem listar os repositórios de todos os pro
 
 - **Requisitos de Acesso**:
   - Login no IAM Identity Center.
-    - <https://lsd.awsapps.com/start>
+    - <https://lsd-ufcg.awsapps.com/start>
   - Permissões necessárias configuradas.
 - **Ferramentas Necessárias**:
   - AWS CLI instalado e configurado.
@@ -64,7 +64,7 @@ Adicionalmente, todos os usuários podem listar os repositórios de todos os pro
 
 Acesse o portal da AWS no link:
 
-- <https://lsd.awsapps.com/start>
+- <https://lsd-ufcg.awsapps.com/start>
 
 Ao logar, você verá a conta `AWS-LSD`, expanda seu conteúdo para mais informações. Você agora verá um menu com:
 
