@@ -127,8 +127,7 @@ aws ecr describe-repositories
 1. Autentique o Docker no ECR:
 
    ```bash
-   aws ecr get-login-password --region us-east-1 | docker login --username AWS
-   --password-stdin 851296927411.dkr.ecr.us-east-1.amazonaws.com
+   aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 851296927411.dkr.ecr.us-east-1.amazonaws.com
    ```
 
 > [!WARNING]
