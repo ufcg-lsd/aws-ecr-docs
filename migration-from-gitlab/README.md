@@ -1,10 +1,13 @@
 # GitLab Registry para AWS ECR
 
-Este guia fornece os passos necessários para migrar imagens Docker do registry do GitLab para o AWS Elastic Container Registry (ECR).
+Este guia fornece os passos necessários para migrar imagens Docker do registry
+do GitLab para o AWS Elastic Container Registry (ECR).
 
 ## 1. Introdução
 
-Durante a migração, os usuários deverão extrair as imagens existentes do GitLab Registry e fazer o upload delas para o AWS ECR. Este processo garantirá que todas as imagens estejam acessíveis no novo repositório.
+Durante a migração, os usuários deverão extrair as imagens existentes do GitLab
+Registry e fazer o upload delas para o AWS ECR. Este processo garantirá que
+todas as imagens estejam acessíveis no novo repositório.
 
 ## 2. Pré-requisitos
 
@@ -18,7 +21,8 @@ Identity Center.
 
 ## 4. Automatização com Script Bash
 
-Use o script Bash [`migrate.sh`](./migrate.sh) presente no repositório para facilitar a migração.
+Use o script Bash [`migrate.sh`](./migrate.sh) presente no repositório para
+facilitar a migração.
 
 ### Uso do Script
 
@@ -50,4 +54,5 @@ o administrador.
 
 ---
 
-Este guia deve ser seguido para todas as imagens que precisam ser migradas. Em caso de dificuldades, consulte a documentação oficial ou o suporte técnico.
+Este guia deve ser seguido para todas as imagens que precisam ser migradas. Em
+caso de dificuldades, consulte a documentação oficial ou o suporte técnico.
