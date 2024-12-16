@@ -7,7 +7,88 @@ gerenciar o AWS Elastic Container Registry (ECR). Aqui você encontrará boas
 práticas, comandos essenciais e informações sobre a organização de usuários e
 permissões.
 
-## 2. Organização de Usuários e Permissões
+## 2. Pré-requisitos
+
+- **Requisitos de Acesso**:
+  - **Login em sua conta Google do LSD**
+  - Login no IAM Identity Center.
+    - <https://lsd-ufcg.awsapps.com/start>
+  - Permissões necessárias configuradas.
+
+- **Ferramentas Necessárias**:
+  - AWS CLI instalado e configurado.
+    - [Documentação oficial](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+  - Docker instalado.
+    - [Documentação oficial](https://docs.docker.com/engine/install/)
+
+> [!TIP]
+> No MacOS você pode instalar a AWS CLI via [`brew`](https://brew.sh/):
+> `brew install awscli`  
+> [!NOTE]
+> Nos nossos exemplos usamos `docker` (recomendado), mas você pode usar outro container
+> runtime (por exemplo, [Podman](https://podman.io/),
+> [containerd](https://containerd.io/), etc.)
+
+## 3. Configurando o AWS CLI
+
+1. Acesse o portal da AWS no link: <https://lsd-ufcg.awsapps.com/start>
+
+2. Ao logar, você verá a conta `AWS-LSD`, expanda seu conteúdo para mais
+informações. Você agora verá um menu com: `<nome_role> | Access Keys 🔑`
+
+3. Clique em `Access Keys 🔑` para configurar o acesso à conta.
+
+4. Escola seu sistema operacional listado (`macOS and Linux | Windows | PowerShell`)
+
+5. Veja a primeira opção listada (_AWS IAM Identity Center credentials (Recommended)_)
+
+6. Copie o comando:
+
+```bash
+aws configure sso
+```
+
+7. Em `SSO session name` escolha um nome para sua sessão
+
+8. Em `SSO start URL` copie o link do portal da AWS (passo 5)
+
+9. Em `SSO region` copie a região do portal da AWS (passo 5)
+
+10. Em `SSO registration scopes` não modifique nada e apenas dê _Enter_
+
+11. Você será redirecionado para seu navegador padrão pedindo a confirmação de acesso
+
+12. Clique no botão de _Allow access_ no seu navegador
+
+13. Feche a aba e volte para o terminal. Você então será apresentado com as
+    opções de seus papéis (_roles_). Escolha a _role_ que te foi dado o acesso.
+
+14. Em `CLI default client Region` digite a mesma região configurada no passo 9
+
+15. Em `CLI default output format` escolha um dos possíveis formatos:
+
+- `json`
+- `text`
+- `table`
+- `yaml`
+- `yaml-stream`
+
+16. Em `CLI profile name` digite `default`.
+
+> [!IMPORTANT]
+> Caso tenha configurado um nome diferente de **default**, você precisará
+> passar a opção `--profile <nome_perfil>` para qualquer comando da `awscli`.
+
+Pronto! Agora você está apto a usar a `awscli` para suas tarefas.
+
+> [!IMPORTANT]
+> A partir de agora, para ter permissões de acesso à AWS você precisará apenas digitar:
+>
+> ```bash
+> aws sso login
+> ```
+
+## 4. Organização de Usuários e Permissões
 
 ### Projetos
 
@@ -60,41 +141,6 @@ adição/remoção de usuários em projetos. Recomendamos que o professor
 responsável pelo projeto crie um ticket pedindo a criação do projeto,
 fornecendo uma lista de emails com domínio `lsd` (e.g.,
 `fulano.silva@lsd.ufcg.edu.br`, etc).
-
-## 3. Pré-requisitos
-
-- **Requisitos de Acesso**:
-  - Login no IAM Identity Center.
-    - <https://lsd-ufcg.awsapps.com/start>
-  - Permissões necessárias configuradas.
-- **Ferramentas Necessárias**:
-  - AWS CLI instalado e configurado.
-    - [Documentação oficial](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-  - Docker instalado.
-    - [Documentação oficial](https://docs.docker.com/engine/install/)
-
-> [!NOTE]
-> Nos nossos exemplos usamos `docker`, mas você pode usar qualquer container
-> engine que siga a OCI ([Podman](https://podman.io/), etc.)
-
-## 4. Configurando o AWS CLI
-
-Acesse o portal da AWS no link:
-
-- <https://lsd-ufcg.awsapps.com/start>
-
-Ao logar, você verá a conta `AWS-LSD`, expanda seu conteúdo para mais
-informações. Você agora verá um menu com:
-
-```text
-<nome_role> | Access Keys 🔑
-```
-
-Clique em `Access Keys 🔑` para configurar o acesso à conta.
-
-> [!TIP]
-> Ao configurar o `profile` engine que siga a OCI
-> ([Podman](https://podman.io/), etc.)
 
 ## 5. Trabalhando com o AWS ECR
 

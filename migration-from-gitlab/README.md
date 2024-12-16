@@ -16,8 +16,10 @@ Certifique-se de que:
 - Você tem acesso ao GitLab Registry.
 - As permissões de "push" e "pull" no AWS ECR foram configuradas via IAM
 Identity Center.
-- Docker CLI e AWS CLI estão instalados e configurados.
-- Você está autenticado no IAM Identity Center
+- Docker CLI e AWS CLI estão instalados e configurados. (veja o
+[`README.md`](../README.md) do repositório)
+- Você está autenticado no IAM Identity Center (veja o
+[`README.md`](../README.md) do repositório)
 
 ## 4. Automatização com Script Bash
 
