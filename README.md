@@ -1,5 +1,15 @@
 # Documentação AWS
 
+> [!IMPORTANT]
+> Caso você precise migrar container images do GitLab Registry para o AWS ECR:
+>
+> 1. Complete a sessão de [Pré-requisitos](#2-pré-requisitos)
+> 2. Complete a sessão de [Configurando o AWS CLI](#3-configurando-o-aws-cli)
+> 3. Vá para o diretório [migration-from-gitlab](./migration-from-gitlab/) e
+>    continue de lá
+
+---
+
 ## 1. Introdução
 
 Esta documentação tem como objetivo orientar o uso do AWS CLI para acessar e
@@ -23,7 +33,10 @@ permissões.
 
 > [!TIP]
 > No MacOS você pode instalar a AWS CLI via [`brew`](https://brew.sh/):
-> `brew install awscli`  
+>
+> ```bash
+> brew install awscli
+> ```
 
 > [!NOTE]
 > Nos nossos exemplos usamos `docker` (recomendado), mas você pode usar outro container
