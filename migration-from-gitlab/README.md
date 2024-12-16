@@ -40,6 +40,21 @@ Execute o script fornecendo os parâmetros necessários:
 ./migrate.sh <gitlab_group> <image_name> <tag>
 ```
 
+Por exemplo, caso você tenha um repositório em: `https://git.lsd.ufcg.edu.br/ops/python`.
+Nesse repositório, eu tenho o Registry habilitado com uma imagem `python`.
+Para essa imagem digamos que eu tenha a tag `3.14-alpine` associada.  
+Então:
+
+- `ops` é o nome do group do GitLab (`<gitlab_group>`)
+- `python` é o nome da imagem (`<image_name>`)
+- `3.14-alpine` é o nome da imagem (`<tag>`)
+
+O comando para migrar essa imagem com essa tag seria:
+
+```bash
+./migrate.sh ops python 3.14-alpine
+```
+
 ## 5. Validação
 
 Verifique se a imagem está disponível no AWS ECR:
