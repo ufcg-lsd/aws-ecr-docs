@@ -24,6 +24,7 @@ permissões.
 > [!TIP]
 > No MacOS você pode instalar a AWS CLI via [`brew`](https://brew.sh/):
 > `brew install awscli`  
+
 > [!NOTE]
 > Nos nossos exemplos usamos `docker` (recomendado), mas você pode usar outro container
 > runtime (por exemplo, [Podman](https://podman.io/),
