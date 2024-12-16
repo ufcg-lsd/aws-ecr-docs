@@ -26,6 +26,14 @@ Identity Center.
 Use o script Bash [`migrate.sh`](./migrate.sh) presente no repositório para
 facilitar a migração.
 
+### Como saber quais imagens e tags um repositório contém?
+
+Acessando a página do repositório, na aba à esquerda, clique na opção `Deploy >
+Container Registry` (ou seja, _Deploy_ e depois _Container Registry_).
+
+Você verá uma lista de imagens de container. Ao clicar em uma das imagens você
+poderá ver que tags ela tem.
+
 ### Uso do Script
 
 Salve o script acima como `migrate.sh` e torne-o executável:
