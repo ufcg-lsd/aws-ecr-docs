@@ -42,6 +42,10 @@ Salve o script acima como `migrate.sh` e torne-o executável:
 chmod +x migrate.sh
 ```
 
+> [!WARNING] No script modifique as variáveis `GITLAB_USERNAME`,
+> `GITLAB_PASSWORD`, e `NAMESPACE` para autenticação no GitLab e para criação
+> de repositórios no ECR.
+
 Execute o script fornecendo os parâmetros necessários:
 
 ```bash
