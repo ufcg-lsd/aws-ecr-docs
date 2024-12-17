@@ -53,7 +53,7 @@ informações. Você agora verá um menu com: `<nome_role> | Access Keys 🔑`
 
 3. Clique em `Access Keys 🔑` para configurar o acesso à conta.
 
-4. Escola seu sistema operacional listado (`macOS and Linux | Windows | PowerShell`)
+4. Escolha seu sistema operacional listado (`macOS and Linux | Windows | PowerShell`)
 
 5. Veja a primeira opção listada (_AWS IAM Identity Center credentials (Recommended)_)
 
@@ -198,7 +198,7 @@ aws ecr describe-repositories
 > ```bash
 > aws ecr create-repository --repository-name <namespace>/<nome_repositório>
 > ```
->
+
 2. Envie a imagem:
 
    ```bash
