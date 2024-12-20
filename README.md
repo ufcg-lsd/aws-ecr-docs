@@ -3,9 +3,9 @@
 > [!IMPORTANT]
 > Caso você precise migrar container images do GitLab Registry para o AWS ECR:
 >
-> 1. Complete a sessão de [Pré-requisitos](#2-pré-requisitos)
-> 2. Complete a sessão de [Configurando o AWS CLI](#3-configurando-o-aws-cli)
-> 3. Complete a sessão de [Organização de Usuários e Permissões](#4-organização-de-usuários-e-permissões)
+> 1. Complete a seção de [Pré-requisitos](#2-pré-requisitos)
+> 2. Complete a seção de [Configurando o AWS CLI](#3-configurando-o-aws-cli)
+> 3. Complete a seção de [Organização de Usuários e Permissões](#4-organização-de-usuários-e-permissões)
 > 4. Vá para o diretório [migration-from-gitlab](./migration-from-gitlab/) e
 >    continue de lá
 
